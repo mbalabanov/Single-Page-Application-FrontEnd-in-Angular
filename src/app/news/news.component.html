@@ -1,0 +1,13 @@
+<div class="row py-3">
+    <div class="col-12 text-center">
+        <h2>Latest Blog Entries</h2>
+    </div>
+</div>
+<div class="row px-md-4">
+    <div class="col-md-4 text-left pb-5 bloglist" *ngFor="let item of blogitems; index as postId">
+        <img src="{{ item.photo }}" alt="{{ item.title }}" [routerLink]="['/blogpost', (item.urlAddress).toLowerCase()]">
+        <h3 class="py-2"><a [routerLink]="['/blogpost', postId]">{{ item.title }}</a></h3>
+        <p>{{ item.teaser }}</p>
+        <p><a class="btn btn-outline-secondary" [routerLink]="['/blogpost', (item.urlAddress).toLowerCase()]">Read post</a></p>
+    </div>
+</div>

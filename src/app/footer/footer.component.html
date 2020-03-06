@@ -1,0 +1,36 @@
+<footer class="text-light p-5">
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <h4 class="my-4">About me</h4>
+            <p>I'm Lance, a professional photographer from Australia living and working in Vienna, Austria. My photo studio is in the 8<sup>th</sup> district. I work mainly as a fine-art photo&shy;grapher, event photo&shy;grapher, and photo reporter.</p>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <h4 class="my-4">Quick Links</h4>
+            <ul>
+                <li class="my-2"><a routerLink="/" class="text-white">Home</a></li>
+                <li class="my-2"><a routerLink="/travel" class="text-white">My Photo Portfolio</a></li>
+                <li class="my-2"><a routerLink="/blog" class="text-white">Blog Posts</a></li>
+                <li class="my-2"><a routerLink="/about" class="text-white">About Me</a></li>
+                <li class="my-2"><a routerLink="/contact" class="text-white">Contact Me</a></li>
+                <li class="my-2"><a routerLink="/shoppingcart" class="text-white">Shopping Cart</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <h4 class="my-4">Latest Posts</h4>
+			<ul>
+				<li *ngFor="let item of blogitems" class="my-2"><a [routerLink]="['/blogpost', (item.urlAddress).toLowerCase()]" class="text-white">{{ item.title }}</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <h4 class="my-4">Subscribe to Our Newsletter</h4>
+            <p>Get the latest traveling news and the hottest last-minute offer right to your inbox. Enter your emails and keep informed!</p>
+            <p><input type="text" id="footercontact" name="contact" placeholder="Enter your email address"></p>
+            <p><button class="btn btn-outline-light">Subscribe</button></p>
+        </div>
+    </div>
+    <div class="row mt-4 border-top">
+        <div class="col-12 pt-4">
+            Copyright © 2020 Photographer Lance. All Rights Reserved
+        </div>
+    </div>
+</footer>

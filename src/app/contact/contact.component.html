@@ -1,0 +1,40 @@
+<app-standardheader></app-standardheader>
+
+<div class="container-fluid">
+	<div class="row my-4">
+		<div class="col-12 text-center">
+			<h2>Contact Me</h2>
+		</div>
+	</div>
+
+	<div class="row mb-4 px-3">
+	    <div class="col-md-4 offset-md-2">
+	        <h3>Lance Hardwood</h3>
+	        <p><strong>Address:</strong><br>
+	        Stolzenthalergasse 12/4<br>
+	        1080 Vienna</p>
+	        <p><strong>Tel:</strong>&nbsp;0123 / 123 456 789</p>
+	        <p><strong>Email:</strong>&nbsp;<a href="mailto:lance@hardwood.com">lance@hardwood.com</a></p>
+	    </div>
+	    <div class="col-md-4 px-4">
+	    	<h3>Contact Form</h3>
+			<form [formGroup]="info" (ngSubmit)="onSubmit()">
+			  <div class="form-group">
+			    <label for="userName">Name</label>
+			    <input type="text" class="form-control" id="userName" formControlName="userName" aria-describedby="emailHelp">
+			  </div>
+			  <div class="form-group">
+			    <label for="userEmail">Email address</label>
+			    <input type="email" class="form-control" id="userEmail"  formControlName="userEmail" aria-describedby="emailHelp">
+			  </div>
+			  <div class="form-group">
+			    <label for="userMessage">Message</label>
+			    <textarea name="usermessage" class="form-control" id="userMessage"  formControlName="userMessage" aria-describedby="emailHelp"></textarea>
+			  </div>
+			  <input type="submit" class="btn btn-outline-secondary" value="submit">
+			</form>
+	    </div>
+	</div>
+</div>
+
+<app-footer></app-footer>

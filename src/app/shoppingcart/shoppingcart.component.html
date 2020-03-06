@@ -1,0 +1,63 @@
+<app-standardheader></app-standardheader>
+
+<div class="container-fluid">
+
+    <div class="row m-2">
+        <div class="col-md-12">
+            <nav aria-label="breadcrumb" class="mt-2">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                    <li class="breadcrumb-item"><a routerLink="/portfolio">My Photo Portfolio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row mx-2 mt-2 mb-5">
+        <div class="col-12 p-4">
+            <h2>Your Cart</h2>
+
+            <ng-template [ngIf]="cartitems.length > 0" [ngIfElse]="none">
+                <table class="cart-item table">
+                    <tr *ngFor="let cartitem of cartitems">
+                        <td class="text-left align-top"><strong>Photo Print of "{{ cartitem.name }}"</strong></td>
+                        <td class="text-right align-top"><strong>{{ cartitem.price | currency :'EUR':'symbol-narrow' }}</strong></td>
+                    </tr>
+                    <tr class="border-bottom">
+                        <td class="align-top"><h3>Total Price:</h3></td>
+                        <td class="text-right align-top"><h3>{{ totalprice | currency :'EUR':'symbol-narrow' }}</h3></td>
+                    </tr>
+                    <ng-template [ngIf]="totalprice > 200 && totalprice < 499" >
+                        <tr class="border-bottom">
+                            <td class="align-top"><strong>Discount 10%:</strong></td>
+                            <td class="text-right align-top"><strong>{{ discount10 | currency :'EUR':'symbol-narrow' }}</strong></td>
+                        </tr>
+                        <tr class="border-bottom bg-warning text-white">
+                            <td class="align-middle"><h3>Discounted Total Price:</h3></td>
+                            <td class="text-right align-middle"><h3>{{ discountedPrice10 | currency :'EUR':'symbol-narrow' }}</h3></td>
+                        </tr>
+                    </ng-template>
+                    <ng-template [ngIf]="totalprice > 500">
+                        <tr class="border-bottom">
+                            <td class="align-top"><strong>Discount 20%:</strong></td>
+                            <td class="text-right align-top"><strong>{{ discount20 | currency :'EUR':'symbol-narrow' }}</strong></td>
+                        </tr>
+                        <tr class="border-bottom bg-success text-white">
+                            <td class="align-middle"><h3>Discounted Total Price:</h3></td>
+                            <td class="text-right align-middle"><h3>{{ discountedPrice20 | currency :'EUR':'symbol-narrow' }}</h3></td>
+                        </tr>
+                    </ng-template>
+                </table>
+            </ng-template>
+
+            <ng-template #none>
+                <p>There are no items in your shopping cart.<br>Please go <a routerLink="/portfolio">back to my photo portfolio</a> to continue shopping.</p>
+                <p><a class="btn btn-outline-secondary" routerLink="/portfolio">My Photo Portfolio</a></p>
+            </ng-template>
+
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

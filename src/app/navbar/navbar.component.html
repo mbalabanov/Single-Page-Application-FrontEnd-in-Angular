@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark rounded" id="mainnav">
+
+    <a class="navbar-brand lance-logo mx-2" routerLink="/">Photo Lance</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse ml-2" id="navbarToggler">
+        <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item ml-2">
+                <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            </li>
+            <li class="nav-item ml-2">
+                <a class="nav-link" routerLink="/portfolio" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">My Portfolio</a>
+            </li>
+            <li class="nav-item ml-2">
+                <a class="nav-link" routerLink="/blog" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Blog Posts</a>
+            </li>
+            <li class="nav-item ml-2">
+                <a class="nav-link" routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About Me</a>
+            </li>
+            <li class="nav-item ml-2">
+                <a class="nav-link" routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contact</a>
+            </li>
+        </ul>
+        <button class="btn btn-outline-light btn-sm ml-auto" routerLink="/shoppingcart">Shopping Cart</button>
+    </div>
+</nav>
