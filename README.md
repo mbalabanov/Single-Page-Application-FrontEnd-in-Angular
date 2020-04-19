@@ -1,5 +1,5 @@
 # Single Page Application Frontend in Angular
-This project is a single page application written in TypeSCript and Angular with a mock website for a photographer and a shop for his products.
+This project is a single page application written in TypeScript and Angular with a mock website for a photographer and a shop for his products.
 
 Please see the finished project here: http://marin.codefactory.live/photographer/
 
