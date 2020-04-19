@@ -1,3 +1,5 @@
+This Angular project is a single page application with a mock website for a photographer and a shop for his products.
+
 # Photographer Website as an Example for Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
